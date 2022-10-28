@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky w-100" style="top: 0;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky w-100 mb-2" style="top: 0;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Caeden Perelli-Harris</a>
+        <a class="navbar-brand" href="/home">Caeden Perelli-Harris</a>
     
         <button
-        class="navbar-toggler"
-        type="button"
-        (click)="basicNavbar.toggle()"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+            class="navbar-toggler"
+            type="button"
+            (click)="basicNavbar.toggle()"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
         >
-        <span class="material-symbols-outlined">menu</span>
+            <span class="material-symbols-outlined">menu</span>
         </button>
     
         <div
@@ -19,20 +19,8 @@
             #basicNavbar="mdbCollapse"
         >
             <ul class="navbar-nav ms-auto mb-lg-0">
-                <li class="nav-item px-2">
-                    <a class="nav-link {{active('home')}}" href="#">Home</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="about">About</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="projects">Experience</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="skils">Skills</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="contact">Contact</a>
+                <li class="nav-item px-2" *ngFor="let path of ['home', 'about', 'projects', 'skills', 'gists', 'contact']">
+                    <a class="nav-link text-capitalize {{active(path)}}" href="/{{path}}">{{path}}</a>
                 </li>
             </ul>
         </div>
