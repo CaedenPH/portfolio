@@ -6,12 +6,9 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
-
+export class NavbarComponent {
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
   active(page: string): string {
     const currentPage = this.router.url;
     return currentPage.includes(page) ? 'active' : '';
