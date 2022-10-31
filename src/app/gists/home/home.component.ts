@@ -8,5 +8,4 @@ import { GistService } from 'src/app/gist.service';
 })
 export class GistHomeComponent {
   constructor(public gistService: GistService) { }
-
 }

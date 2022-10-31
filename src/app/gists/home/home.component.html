@@ -1,10 +1,6 @@
-<div class="content mx-5">
-    <div class="container">
-        <div class="item my-3" *ngFor="let i of [1,2,3,4,5]">
-        <!-- <div *ngFor="let gist of gistService.getGists() | keyvalue"> -->
-            <img src="https://images.unsplash.com/photo-1461696114087-397271a7aedc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWVzdGhldGljfGVufDB8fDB8fA%3D%3D&w=1000&q=80">
-            <!-- {{gist.value['description']}} -->
-            Script to ...
-        </div>
+<div class="container-fluid">
+    <div class="item my-3 mx-3" *ngFor="let gist of gistService.getGists() | keyvalue">
+        <p class="label">{{ gist.value['description'] }}</p>
+        <img [src]="'https://img.freepik.com/free-photo/pastel-sky-background-with-text-space_53876-125302.jpg?w=2000'">
     </div>
 </div>

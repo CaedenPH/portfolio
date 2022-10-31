@@ -1,23 +1,21 @@
-.container {
+.container-fluid {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-}
-.item img {
-    height: 280px;
-    width: 100%;
-    resize: both;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .item {
-    cursor: pointer;
-    transition: 500ms;
+    transition-duration: 300ms;
 }
 .item:hover {
-    transform: scale(1.07);
+    cursor: pointer;
+    transform: scale(1.1)
 }
-
-@media only screen and (max-width: 70px) {
-    .container {
-        flex-direction: column;
-    }
+.item img {
+    resize: both;
+    height: 250px;
+    width: 320px;
+}
+.label {
+    width: 50%;
+    word-break: break-word;
 }
